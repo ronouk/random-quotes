@@ -1,0 +1,2 @@
+https://goquotes.docs.apiary.io/
+https://goquotes-api.herokuapp.com/api/v1/random?count=10
