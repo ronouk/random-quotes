@@ -8,11 +8,12 @@ const quote = document.getElementById("quote");
 const author = document.getElementById("author");
 const footerDate = document.getElementById("footer-date");
 
-const quoteApi = 'https://goquotes-api.herokuapp.com/api/v1/random?count=10';
+const quoteApi = 'https://api.quotable.io/quotes/random?limit=10';
 loaderAnimation("block");
 fetch(quoteApi)
 .then(res => res.json())
-.then(data => displayQuotes(data.quotes));
+// .then(data => console.log(data));
+.then(data => displayQuotes(data));
 const displayQuotes = quotes =>{
 
     for (let i = 0; i < quotes.length; i++) {
@@ -20,8 +21,8 @@ const displayQuotes = quotes =>{
         const quoteBody = document.createElement('figure');
         quoteBody.className = "quote-box";
         quoteBody.innerHTML = `
-            <p id="quote-tag">${quotes[i].tag}</p>
-            <blockquote id="quote" cite="https://goquotes.docs.apiary.io/">${quotes[i].text}</blockquote>
+            <p id="quote-tag">${quotes[i].tags[0]}</p>
+            <blockquote id="quote" cite="https://goquotes.docs.apiary.io/">${quotes[i].content}</blockquote>
             <figcaption id="author">- ${quotes[i].author}</figcaption>
         `;
 

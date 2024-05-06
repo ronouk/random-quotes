@@ -33,7 +33,7 @@ body{
 }
 
 .quote-box{
-    background: rgba(238, 238, 238, 0.4);
+    background: rgba(238, 238, 238, 0.8);
     border-radius: 10px;
     margin: 20px;
     padding: 30px;
@@ -42,7 +42,7 @@ body{
 
 .quote-box:hover{
   background: rgba(189, 189, 189, 0.3);
-  color: rgb(111, 0, 255);
+  color: rgb(239, 40, 26);
 }
 
 #quote{
@@ -51,7 +51,8 @@ body{
 
 #quote-tag{
     font-style: italic;
-    color: #777777;
+    /* color: #777777; */
+    color: #f2a026;
     margin-bottom: 10px;
 }
 
